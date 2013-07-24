@@ -63,4 +63,4 @@ giftAppActivity.iconOfActivity = [UIImage imageNamed:@"gift-icon"];
 
 ## Credits
 
-MDMGiftAppActivity is brought to you by [Matthew Morey](http://matthewmorey.com). The gift icon is from [Glyphish](http://glyphish.com/). If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/mmorey/MDMGiftAppActivity/issues/new). If you're using MDMGiftAppActivity in your project, attribution would be nice.
+MDMGiftAppActivity is brought to you by [Matthew Morey](http://matthewmorey.com). The gift icon is from [GLYPHICONS](http://glyphicons.com/). If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/mmorey/MDMGiftAppActivity/issues/new). If you're using MDMGiftAppActivity in your project, attribution would be nice.

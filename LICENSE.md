@@ -10,6 +10,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Other Resources
 
-A different license may apply to other ressources included in this package, 
-including Joseph Wain's Glyphish Icons. Please consult their 
-respective headers for the terms of their individual licenses
+A different license may apply to other ressources included in this package, including Jan Kovařík's GLYPHICONS icons. Please consult their respective headers for the terms of their individual licenses
