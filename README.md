@@ -1,7 +1,7 @@
 # MDMGiftAppActivity
 
-[![MDMGiftAppActivity](http://cocoapod-badges.herokuapp.com/v/MDMGiftAppActivity/badge.png)](http://cocoadocs.org/docsets/MDMGiftAppActivity)
-[![MDMGiftAppActivity](http://cocoapod-badges.herokuapp.com/p/MDMGiftAppActivity/badge.svg)](http://cocoadocs.org/docsets/MDMGiftAppActivity)
+[![MDMGiftAppActivity](https://cocoapod-badges.herokuapp.com/v/MDMGiftAppActivity/badge.png)](http://cocoadocs.org/docsets/MDMGiftAppActivity)
+[![MDMGiftAppActivity](https://cocoapod-badges.herokuapp.com/p/MDMGiftAppActivity/badge.svg)](http://cocoadocs.org/docsets/MDMGiftAppActivity)
 
 MDMGiftAppActivity is a `UIActivity` subclass that provides a "Gift App" action to a `UIActivityViewController`.
 
