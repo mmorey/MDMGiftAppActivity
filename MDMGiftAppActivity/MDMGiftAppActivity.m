@@ -34,17 +34,17 @@
 
 - (id)initWithAppID:(NSString *)appID {
 
-    return [self initWithAppID:appID withSiteID:nil withPartnerID:nil];
+    return [self initWithAppID:appID withAffiliateToken:nil withCampaignToken:nil];
     
 }
 
-- (id)initWithAppID:(NSString *)appID withSiteID:(NSString *)siteID withPartnerID:(NSString *)partnerID {
-    
+- (id)initWithAppID:(NSString *)appID withAffiliateToken:(NSString *)affiliateToken withCampaignToken:(NSString *)campaignToken {
+
     self = [super init];
     if (self) {
         self.appID = appID;
-        self.siteID = siteID;
-        self.partnerID = partnerID;
+        self.affiliateToken = affiliateToken;
+        self.campaignToken = campaignToken;
     }
     return self;
     
@@ -80,13 +80,17 @@
     // itms-appss: https equivalent for linking directly to App Store instead of launching Safari
     // mt: Media Types, 8 = Mobile Software Applications
     // salableAdamId: Apple ID for App
-    // partnerID: Affiliate network, 30 for LinkShare (optional)
-    // siteID: Affiliate account (optional)
+    // at: Affiliate token (optional)
+    // ct: Affiliate campaign token (optional)
     
     NSString *giftURLString = [NSString stringWithFormat:@"itms-appss://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/giftSongsWizard?gift=1&salableAdamId=%@&productType=C&pricingParameter=STDQ&mt=8&ign-mscache=1", self.appID];
     
-    if (([self.siteID length] > 0) && ([self.partnerID length] > 0)) {
-        giftURLString = [giftURLString stringByAppendingFormat:@"&partnerId=%@&siteID=%@", self.partnerID, self.siteID];
+    if ([self.affiliateToken length] > 0) {
+        giftURLString = [giftURLString stringByAppendingFormat:@"&at=%@", self.affiliateToken];
+        
+        if ([self.campaignToken length] > 0) {
+            giftURLString = [giftURLString stringByAppendingFormat:@"&ct=%@", self.campaignToken];
+        }
     }
     
     self.appStoreURL = [NSURL URLWithString:giftURLString];

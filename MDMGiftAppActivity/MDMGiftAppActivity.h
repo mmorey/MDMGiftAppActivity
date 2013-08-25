@@ -27,13 +27,13 @@
 @interface MDMGiftAppActivity : UIActivity
 
 @property (nonatomic, strong) NSString *appID;
-@property (nonatomic, strong) NSString *siteID;
-@property (nonatomic, strong) NSString *partnerID;
+@property (nonatomic, strong) NSString *affiliateToken;
+@property (nonatomic, strong) NSString *campaignToken;
 
 @property (nonatomic, strong) NSString *titleOfActivity;
 @property (nonatomic, strong) UIImage *iconOfActivity;
 
 - (id)initWithAppID:(NSString *)appID;
-- (id)initWithAppID:(NSString *)appID withSiteID:(NSString *)siteID withPartnerID:(NSString *)partnerID;
+- (id)initWithAppID:(NSString *)appID withAffiliateToken:(NSString *)affiliateToken withCampaignToken:(NSString *)campaignToken;
 
 @end
