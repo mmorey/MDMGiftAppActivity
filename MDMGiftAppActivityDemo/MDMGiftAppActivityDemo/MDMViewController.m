@@ -43,7 +43,7 @@
     MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"593296099"];
     
     // Gift app with affiliate ID
-    // MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"XXXXXXXXX" withSiteID:@"YYYYYYYYYYY" withPartnerID:@"ZZ"];
+    // MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"XXXXXXXXX" withAffiliateToken:@"YYYYYY" withCampaignToken:@"ZZZZZZZ"];
     
     NSArray *applicationActivities = @[giftAppActivity];
     
