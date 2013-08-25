@@ -46,7 +46,7 @@ UIActivityViewController *activityViewController = [[UIActivityViewController al
 Add affiliate ID
 
 ```objective-c
-MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"XXXXXXXXX" withSiteID:@"YYYYYYYYYYY" withPartnerID:@"ZZ"];
+MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"XXXXXXXXX" withAffiliateToken:@"YYYYYY" withCampaignToken:@"ZZZZZZZ"];
 ```
 
 Change activity title
