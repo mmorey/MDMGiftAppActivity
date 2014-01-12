@@ -24,6 +24,8 @@
 
 #import "MDMGiftAppActivity.h"
 
+#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
 @interface MDMGiftAppActivity ()
 
 @property (nonatomic, strong) NSURL *appStoreURL;
@@ -83,7 +85,12 @@
     // at: Affiliate token (optional)
     // ct: Affiliate campaign token (optional)
     
-    NSString *giftURLString = [NSString stringWithFormat:@"itms-appss://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/giftSongsWizard?gift=1&salableAdamId=%@&productType=C&pricingParameter=STDQ&mt=8&ign-mscache=1", self.appID];
+    NSString *giftURLString = nil;
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        giftURLString = [NSString stringWithFormat:@"itms-appss://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/giftSongsWizard?gift=1&salableAdamId=%@&productType=C&pricingParameter=STDQ&mt=8&ign-mscache=1", self.appID];
+    } else {
+        giftURLString = [NSString stringWithFormat:@"itms-appss://itunes.apple.com/us/app/id%@?mt=8", self.appID];
+    }
     
     if ([self.affiliateToken length] > 0) {
         giftURLString = [giftURLString stringByAppendingFormat:@"&at=%@", self.affiliateToken];

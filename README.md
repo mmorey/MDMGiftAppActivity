@@ -5,6 +5,11 @@
 
 MDMGiftAppActivity is a `UIActivity` subclass that provides a "Gift App" action to a `UIActivityViewController`.
 
+On iOS 6 the user will be taken to the gifting dialog for the app on the App Store. 
+
+On iOS 7 the user is taken to the App Store page for the app instead. Once on the App Store page the use still has to tap on action button in the top toolbar. Apple no longer allows linking directly to the gifting dialog.
+
+![MDMGiftAppActivity Screenshot](https://github.com/mmorey/MDMGiftAppActivity/raw/master/screenshot_iOS7.png)
 ![MDMGiftAppActivity Screenshot](https://github.com/mmorey/MDMGiftAppActivity/raw/master/screenshot.png)
 
 ## Installation
@@ -15,17 +20,15 @@ Add `pod 'MDMGiftAppActivity'` to your Podfile or `pod 'MDMGiftAppActivity', :he
 
 ### Manually
 
-_**Important note if your project doesn't use ARC**: you must add the `-fobjc-arc` compiler flag to `MDMGiftAppActivity.m` in Target Settings > Build Phases > Compile Sources._
-
 Just drag the `MDMGiftAppActivity.[h|m]` and `glyphicons_069_gift[@2x].png` files into your project.
+
+_**Important note:**_ If your project doesn't use ARC you must add the `-fobjc-arc` compiler flag to `MDMGiftAppActivity.m` in Target Settings > Build Phases > Compile Sources.
 
 ## Usage
 
-_**Important note,  demo does not work on simulator**: simulator does not contain the App Store app, you must test on a device._
+_**Important note:**_ Demo does not work on the simulator as it does not contain the App Store app, you must test on a device. See example Xcode project in `/MDMGiftAppActivityDemo`.
 
-(see example Xcode project in `/MDMGiftAppActivityDemo`)
-
-### Create a MDMGiftAppActivity object
+### 1) Create a MDMGiftAppActivity object
 
 ```objective-c
 MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:@"XXXXXXXXX"];
@@ -33,7 +36,7 @@ MDMGiftAppActivity *giftAppActivity = [[MDMGiftAppActivity alloc] initWithAppID:
 
 An app ID can be found by opening iTunes and finding the app you want to link to. Right click on its icon then on ‘Copy Link’. For this example I’m using Buoy Explorer and the link looks like this: `https://itunes.apple.com/us/app/buoy-explorer-noaa-marine/id593296099?mt=8`. The app ID for Buoy Explorer is `593296099`. You can also find the App ID with the [Apple Link Maker](http://itunes.apple.com/linkmaker/).
 
-### Add it to a UIActivityViewController
+### 2) Add it to a UIActivityViewController
 
 ```objective-c
 UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Awesome app"]]
