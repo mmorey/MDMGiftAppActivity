@@ -7,7 +7,7 @@ MDMGiftAppActivity is a `UIActivity` subclass that provides a "Gift App" action 
 
 On iOS 6 the user will be taken to the gifting dialog for the app on the App Store. 
 
-On iOS 7 the user is taken to the App Store page for the app instead. Once on the App Store page the use still has to tap on action button in the top toolbar. Apple no longer allows linking directly to the gifting dialog.
+On iOS 7 the user is taken to the App Store page for the app. Once on the App Store page the user still has to tap on the action button in the top toolbar. Apple no longer allows linking directly to the gifting dialog.
 
 ![MDMGiftAppActivity Screenshot](https://github.com/mmorey/MDMGiftAppActivity/raw/master/screenshot_iOS7.png)
 ![MDMGiftAppActivity Screenshot](https://github.com/mmorey/MDMGiftAppActivity/raw/master/screenshot.png)
