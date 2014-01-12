@@ -1,5 +1,5 @@
 #########################
-# .gitignore file for Xcode4 / OS X Source projects
+# .gitignore file for Xcode5
 #
 # NB: if you are storing "built" products, this WILL NOT WORK,
 #   and you should use a different .gitignore (or none at all)
@@ -7,6 +7,7 @@
 #   files that we want to exclude
 #
 # For updates, see: http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects
+#   and https://gist.github.com/adamgit/3786883
 #########################
 
 #####
@@ -110,6 +111,13 @@ xcuserdata
 
 *.moved-aside
 
+####
+# Xcode 5 -  Source Control files
+#
+# Xcode 5 introduced a new file type .xccheckout. This files contains VCS metadata
+# and should therefore not be checked into the VCS.
+
+*.xccheckout
 
 ####
 # UNKNOWN: recommended by others, but I can't discover what these files are
